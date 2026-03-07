@@ -80,6 +80,9 @@ const CollapsibleSection = ({
       <button
         className={clsx(
           'group flex w-full flex-row items-center gap-2 text-left',
+          'max-md:active:bg-(--card-color)',
+          'max-md:focus-visible:bg-(--card-color)',
+          'md:hover:bg-(--card-color)',
           'hover:cursor-pointer',
           styles.header,
           fullBorder
@@ -94,8 +97,8 @@ const CollapsibleSection = ({
             'transition-transform duration-300 ease-out',
             'transition-colors delay-200 duration-300',
             'text-(--border-color)',
-            'max-md:group-active:text-(--main-color)',
-            'max-md:group-focus-visible:text-(--main-color)',
+            'group-active:text-(--main-color)',
+            'group-focus-visible:text-(--main-color)',
             'md:group-hover:text-(--main-color)',
             !isOpen && 'rotate-180',
           )}
@@ -104,7 +107,15 @@ const CollapsibleSection = ({
 
         {/* Optional icon */}
         {icon && (
-          <span className='flex items-center text-(--secondary-color)'>
+          <span
+            className={clsx(
+              'flex h-11 w-11 items-center justify-center rounded-xl bg-(--card-color) text-(--secondary-color)',
+              'transition-colors duration-300',
+              'group-active:bg-(--background-color)',
+              'group-focus-visible:bg-(--background-color)',
+              'md:group-hover:bg-(--background-color)',
+            )}
+          >
             {icon}
           </span>
         )}
