@@ -1507,12 +1507,12 @@
     "id": 251,
     "fact": "Japan has an art of arranging flowers called 'ikebana' (生け花), focusing on balance, line, and space rather than volume.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 252,
     "fact": "The Japanese word 'kotodama' (言霊) means 'spirit of words' — the belief that words have power and influence outcomes.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
